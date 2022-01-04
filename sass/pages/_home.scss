@@ -24,7 +24,7 @@
     transition: all 0.3s;
     @include respond(tab-land) {
       padding: 0;
-			position: relative;
+      position: relative;
     }
 
     .header__contact-container {
@@ -50,45 +50,46 @@
       .logo {
         transition: all 0.3s;
         width: 20rem;
+        @include respond(phone) {
+          width: 15rem;
+        }
       }
     }
-		.burger {
-			position: relative;
-			z-index: 100;
-			flex-direction: column;
-			justify-content: space-between;
-			height: 2.5rem;
-			justify-self: end;
-			padding-right: 2rem;
-			display: none;
-			cursor: pointer;
-			@include respond(tab-land) {
+    .burger {
+      position: relative;
+      z-index: 100;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 2.5rem;
+      justify-self: end;
+      padding-right: 2rem;
+      display: none;
+      cursor: pointer;
+      @include respond(tab-land) {
         display: flex;
       }
-			.burger_dash {
-				height: 0.1rem;
-				width: 4rem;
-				background: #fff;
-				transform-origin: left center;
-				transition: all .3s;
-				display: inline-block;
-			}
-			&.active{
-				.dash-2 {
-					width: 0%;
-					opacity: 0;
-				}
-				.dash-1{
-					transform: rotate(45deg);
-				}
-				.dash-3{
-					transform: rotate(-45deg);
-				}
-			}
-			
-		}
+      .burger_dash {
+        height: 0.1rem;
+        width: 4rem;
+        background: #fff;
+        transform-origin: left center;
+        transition: all 0.3s;
+        display: inline-block;
+      }
+      &.active {
+        .dash-2 {
+          width: 0%;
+          opacity: 0;
+        }
+        .dash-1 {
+          transform: rotate(45deg);
+        }
+        .dash-3 {
+          transform: rotate(-45deg);
+        }
+      }
+    }
     .nav {
-			
       @include respond(tab-land) {
         position: absolute;
         right: -110%;
@@ -97,13 +98,13 @@
         height: 100vh;
         z-index: 50;
         background: linear-gradient(-45deg, $primary, $secondary);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				transition: all .5s;
-				&.active{
-					right: 0;
-				}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        &.active {
+          right: 0;
+        }
       }
       ul {
         list-style: none;
@@ -112,9 +113,9 @@
         @include respond(tab-land) {
           flex-direction: column;
           align-items: center;
-					justify-content: center;
+          justify-content: center;
           color: $primary;
-					font-size: 3rem;
+          font-size: 3rem;
         }
         a {
           padding: 0.5rem 1.5rem;
@@ -124,8 +125,8 @@
           transition: all 0.4s;
           @include respond(tab-land) {
             color: $tertiary;
-						padding: 2.5rem;
-						font-weight: 700;
+            padding: 2.5rem;
+            font-weight: 700;
           }
           &:hover {
             color: $primary;
