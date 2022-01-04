@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat Alternates', sans-serif;
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $tertiary;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0rem;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: $primary;
+  color: $tertiary;
+}
+
+::selection {
+  background: $primary;
+  color: $tertiary;
+}
