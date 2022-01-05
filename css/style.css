@@ -230,6 +230,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2; }
+    @media screen and (max-width: 37.5em) {
+      .body-wrapper .about {
+        padding: 4rem 4rem; } }
     .body-wrapper .about__heading {
       text-align: center;
       font-size: 3rem;
@@ -259,6 +262,9 @@ body {
         margin: auto 0; }
   .body-wrapper .why {
     padding: 8rem 10rem; }
+    @media screen and (max-width: 37.5em) {
+      .body-wrapper .why {
+        padding: 4rem 4rem; } }
     .body-wrapper .why__heading {
       text-align: center;
       font-size: 3rem;

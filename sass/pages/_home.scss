@@ -215,6 +215,9 @@
     display: flex;
     flex-direction: column;
     background-color: $light;
+    @include respond(phone) {
+      padding: 4rem 4rem; 
+    }
 
     &__heading {
       text-align: center;
@@ -254,6 +257,10 @@
   }
   .why{
     padding: 8rem 10rem;
+
+    @include respond(phone) {
+      padding: 4rem 4rem; 
+    }
 
     &__heading {
       text-align: center;
