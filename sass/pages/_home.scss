@@ -32,10 +32,13 @@
         padding: 0;
         position: relative;
       }
+      @include respond(phone) {
+        grid-template-columns: 2fr 2fr 1fr
+      }
 
       .header__contact-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         @include respond(tab-land) {
           flex-direction: column;
@@ -47,6 +50,9 @@
             font-size: 1.8rem;
           }
         }
+        @include respond(phone) {
+          
+        }
       }
 
       .header__logo-container {
@@ -57,8 +63,11 @@
           transition: all 0.3s;
           width: 20rem;
           @include respond(tab-port) {
-            width: 15rem;
+            width: 18rem;
           }
+        }
+        @include respond(phone) {
+          justify-self: start;
         }
       }
       .burger {
@@ -174,6 +183,9 @@
       .header__heading {
         font-size: 6rem;
         text-align: left;
+        @include respond(phone) {
+          font-size: 4.5rem;
+        }
         &-secondary {
           font-size: 2rem;
           font-weight: 500;
@@ -204,10 +216,77 @@
     flex-direction: column;
     background-color: $light;
 
-    .about__heading {
+    &__heading {
       text-align: center;
       font-size: 3rem;
       color: $primary;
+      margin-bottom: 5.5rem;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+
+    }
+    &__card {
+      width: 48%;
+      @include respond(tab-port) {
+        width: 100%;
+      }
+      &-photo{
+        margin: auto 0;
+        @include respond(tab-port) {
+          margin-bottom: 3rem;
+        }
+        img{
+          width: 100%;
+        }
+      }
+      &-text{
+        font-size: 2.2rem;
+        text-align: justify;
+        margin: auto 0;
+      }
+    }
+  }
+  .why{
+    padding: 8rem 10rem;
+
+    &__heading {
+      text-align: center;
+      font-size: 3rem;
+      color: $primary;
+      margin-bottom: 5.5rem;
+    }
+
+    &__content{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 5rem;
+      justify-items: center;
+      @include respond(tab-port) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include respond(phone) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__card {
+      padding: 2rem;
+      width: 90%;
+      box-shadow: 0px 0px 20px 0px rgba(44, 100, 109, 0.507);
+      text-align: center;
+      border-radius: 1rem;
+      &-heading {
+        font-size: 1.5rem;
+      }
+      &-text {
+        font-size: 1.4rem;
+      }
     }
   }
 }
