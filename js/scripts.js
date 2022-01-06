@@ -10,13 +10,17 @@ document.addEventListener('scroll', () => {
 const burger = document.querySelector('.burger');
 const menuCheckbox = document.querySelector('#menu');
 const nav = document.querySelector('.nav')
+const body = document.querySelector('body');
 burger.addEventListener('click', ()=>{
   menuCheckbox.checked = !menuCheckbox.checked;
   if (menuCheckbox.checked) {
     nav.classList.add('active');
+    body.style.overflowY = 'hidden';
     burger.classList.add('active');
   } else {
     nav.classList.remove('active');
+    body.style.overflowY = 'scroll';
     burger.classList.remove('active');
   }
-})
+});
+

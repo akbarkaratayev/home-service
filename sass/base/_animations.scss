@@ -39,18 +39,18 @@
 }
 @-webkit-keyframes buzz-on-hover {
   50% {
-    transform: translateX(1px) rotate(0.5deg);
+    transform: translateX(1.5px) rotate(0.75deg);
   }
   100% {
-    transform: translateX(-1px) rotate(-0.5deg);
+    transform: translateX(-1.5px) rotate(-0.75deg);
   }
 }
 @keyframes buzz-on-hover {
   50% {
-    transform: translateX(1px) rotate(0.5deg);
+    transform: translateX(1.5px) rotate(0.75deg);
   }
   100% {
-    transform: translateX(-1px) rotate(-0.5deg);
+    transform: translateX(-1.5px) rotate(-0.75deg);
   }
 }
 
