@@ -20,7 +20,7 @@
     .header__nav-container {
       position: fixed;
       width: 100%;
-      padding: 0 8rem;
+      padding: 0 4rem;
       font-size: 1.8rem;
       height: 10rem;
       display: grid;
@@ -152,7 +152,7 @@
         }
       }
       &.darken {
-        background-color: rgba($primary, 0.5);
+        background-color: rgba($primary, 0.8);
         color: #000;
         height: 5rem;
         padding: 0 2rem;
@@ -215,7 +215,13 @@
     padding: 8rem 10rem;
     display: flex;
     flex-direction: column;
-    background-color: $light;
+    background-image: linear-gradient(
+        45deg,
+        rgba($light, 0.95),
+        rgba($light, 0.7)
+      ),
+      url('./../img/about-bg.jpg');
+      background-size: cover;
     @include respond(phone) {
       padding: 4rem 4rem;
     }
@@ -257,7 +263,13 @@
   }
   .why {
     padding: 8rem 10rem;
-    background: $primary;
+    background-image: linear-gradient(
+      90deg,
+      rgba($primary, 0.95),
+      rgba($primary, 0.85)
+    ),
+    url('./../img/bg-pros.jpg');
+    background-size: cover;
 
     @include respond(phone) {
       padding: 4rem 4rem 6rem 4rem;
@@ -305,10 +317,16 @@
     }
   }
   .brands {
-    padding: 8rem 10rem;
+    padding: 8rem 6rem;
     display: flex;
     flex-direction: column;
-    background-color: $light;
+    background-image: linear-gradient(
+      90deg,
+      rgba($light, 0.95),
+      rgba($light, 0.95)
+    ),
+    url('./../img/brands-bg.jpg');
+    background-size: cover;
     @include respond(phone) {
       padding: 4rem 4rem;
     }
@@ -320,9 +338,9 @@
     }
     &__content {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       justify-items: center;
-      @include respond(tab-land){
+      @include respond(tab-port){
         grid-template-columns: repeat(3, 1fr);
       }
       @include respond(phone){
