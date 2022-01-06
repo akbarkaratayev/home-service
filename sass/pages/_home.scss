@@ -91,6 +91,9 @@
           display: inline-block;
         }
         &.active {
+          position: fixed;
+          top: 3rem;
+          right: 1rem;
           .dash-2 {
             width: 0%;
             opacity: 0;
@@ -117,8 +120,9 @@
           justify-content: center;
           transition: all 0.5s;
           &.active {
-            right: 0;
             position: fixed;
+            right: 0;
+            top: 0;
             overflow: hidden;
           }
         }
@@ -221,7 +225,7 @@
         rgba($light, 0.7)
       ),
       url('./../img/about-bg.jpg');
-      background-size: cover;
+    background-size: cover;
     @include respond(phone) {
       padding: 4rem 4rem;
     }
@@ -264,11 +268,11 @@
   .why {
     padding: 8rem 10rem;
     background-image: linear-gradient(
-      90deg,
-      rgba($primary, 0.95),
-      rgba($primary, 0.85)
-    ),
-    url('./../img/bg-pros.jpg');
+        90deg,
+        rgba($primary, 0.95),
+        rgba($primary, 0.85)
+      ),
+      url('./../img/bg-pros.jpg');
     background-size: cover;
 
     @include respond(phone) {
@@ -321,11 +325,11 @@
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(
-      90deg,
-      rgba($light, 0.95),
-      rgba($light, 0.95)
-    ),
-    url('./../img/brands-bg.jpg');
+        90deg,
+        rgba($light, 0.95),
+        rgba($light, 0.95)
+      ),
+      url('./../img/brands-bg.jpg');
     background-size: cover;
     @include respond(phone) {
       padding: 4rem 4rem;
@@ -340,10 +344,10 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       justify-items: center;
-      @include respond(tab-port){
+      @include respond(tab-port) {
         grid-template-columns: repeat(3, 1fr);
       }
-      @include respond(phone){
+      @include respond(phone) {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -354,9 +358,117 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      img{
+      img {
         width: 100%;
       }
     }
   }
 }
+.contacts {
+  padding: 8rem 10rem;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+      45deg,
+      rgba($primary, 0.95),
+      rgba($primary, 0.7)
+    ),
+    url('./../img/contacts-bg.jpg');
+  background-size: cover;
+  color: $tertiary;
+  @include respond(phone) {
+    padding: 4rem 4rem;
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 3rem;
+    color: $tertiary;
+    margin-bottom: 5.5rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    width: 48%;
+    text-align: center;
+    @include respond(tab-land) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+  &__map {
+    &-frame {
+      width: 100%;
+      height: 45rem;
+    }
+  }
+  &__info {
+    line-height: 3;
+  }
+  &__phones {
+    font-size: 2rem;
+    text-decoration: underline;
+    @include respond(tab-land) {
+      font-size: 2.2rem;
+    }
+  }
+  &__social {
+    font-size: 2rem;
+    text-decoration: underline;
+    @include respond(tab-land) {
+      font-size: 2.2rem;
+    }
+    a{
+      height: 2rem;
+      img{
+        height: 2.5rem;
+      }
+    }
+  } 
+}
+footer{
+  height: 5rem;
+  background: #000;
+  color: #888;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  font-size: 1.5em;
+}
+
+.phone_btn {
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 rgba(black, 0.5);
+  background: rgba(white, 0.8);
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 60%;
+    }
+  }
+  &::after {
+    content: 'Позвонить';
+    color: $tertiary;
+  }
+}
+
+

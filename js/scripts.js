@@ -24,3 +24,11 @@ burger.addEventListener('click', ()=>{
   }
 });
 
+let links = document.querySelectorAll(".menu_link");
+links.forEach(item=>{
+  item.addEventListener('click', ()=>{
+    nav.classList.remove('active');
+    body.style.overflowY = 'scroll';
+    burger.classList.remove('active');
+  })
+})
