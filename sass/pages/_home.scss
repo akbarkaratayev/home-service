@@ -33,7 +33,8 @@
         position: relative;
       }
       @include respond(phone) {
-        grid-template-columns: 2fr 2fr 1fr;
+        display: flex;
+        justify-content: space-between;
       }
 
       .header__contact-container {
@@ -45,7 +46,7 @@
           padding-left: 2rem;
         }
         a{
-          font-size: 2.5rem;        }
+          font-size: 3rem;        }
         
       }
 

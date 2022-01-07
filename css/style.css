@@ -87,7 +87,8 @@ body {
           position: relative; } }
       @media screen and (max-width: 37.5em) {
         .body-wrapper .header .header__nav-container {
-          grid-template-columns: 2fr 2fr 1fr; } }
+          display: flex;
+          justify-content: space-between; } }
       .body-wrapper .header .header__nav-container .header__contact-container {
         display: flex;
         justify-content: space-around; }
@@ -96,7 +97,7 @@ body {
             flex-direction: column;
             padding-left: 2rem; } }
         .body-wrapper .header .header__nav-container .header__contact-container a {
-          font-size: 2.5rem; }
+          font-size: 3rem; }
       .body-wrapper .header .header__nav-container .header__logo-container {
         align-self: flex-start;
         margin-top: 0.5rem;
