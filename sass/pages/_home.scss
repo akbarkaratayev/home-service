@@ -44,14 +44,9 @@
           flex-direction: column;
           padding-left: 2rem;
         }
-
-        a {
-          @include respond(tab-land) {
-            font-size: 1.8rem;
-          }
-        }
-        @include respond(phone) {
-        }
+        a{
+          font-size: 2.5rem;        }
+        
       }
 
       .header__logo-container {

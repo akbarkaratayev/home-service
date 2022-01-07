@@ -95,9 +95,8 @@ body {
           .body-wrapper .header .header__nav-container .header__contact-container {
             flex-direction: column;
             padding-left: 2rem; } }
-        @media screen and (max-width: 75em) {
-          .body-wrapper .header .header__nav-container .header__contact-container a {
-            font-size: 1.8rem; } }
+        .body-wrapper .header .header__nav-container .header__contact-container a {
+          font-size: 2.5rem; }
       .body-wrapper .header .header__nav-container .header__logo-container {
         align-self: flex-start;
         margin-top: 0.5rem;
