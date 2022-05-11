@@ -1,1 +1,1 @@
-[Github pages!](https://akbarkaratayev.github.io/home-service)
+[WebSite](https://home-service.uz)
